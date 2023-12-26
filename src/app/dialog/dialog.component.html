@@ -1,0 +1,46 @@
+<h1 mat-dialog-title>Add Record</h1>
+<div mat-dialog-content>
+   <form [formGroup]="recordForm">
+    <div style="padding: 2px;"></div>
+    <mat-form-field appearance="outline">
+        <mat-label>Record Name</mat-label>
+        <input formControlName="recordName" matInput placeholder="Name">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Record Type</mat-label>
+        <mat-select  formControlName="type" placeholder="Type">
+            <mat-option value="Morning">Morning</mat-option>
+            <mat-option value="Afternoon">Afternoon</mat-option>
+            <mat-option value="Evening">Evening</mat-option>
+            <mat-option value="Night">Night</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Choose a date</mat-label>
+        <input  formControlName="date" matInput [matDatepicker]="picker">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <label for="">
+        <h2>Record Status</h2>
+    </label>
+    <mat-radio-group formControlName="status" class="example-radio-group">
+        <mat-radio-button class="example-radio-button" *ngFor="let status of statusList" [value]="status">
+            {{status}}
+        </mat-radio-button>
+    </mat-radio-group>
+    <mat-form-field appearance="outline">
+        <mat-label>Duration</mat-label>
+        <input formControlName="duration" matInput type="number" placeholder="Duration">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Comment</mat-label>
+        <textarea formControlName="comment" matInput placeholder="Comment"></textarea>
+    </mat-form-field>
+    <div mat-dialog-action [align]="'end'">
+        <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+        <button style="margin-left: 8px;" mat-raised-button color="primary" (click)="addRecord()">{{actionBtn}}</button>
+        </div>
+   </form>
+</div>

@@ -1,0 +1,59 @@
+{
+  "records": [
+    {
+      "recordName": "HeavySleep",
+      "type": "Night",
+      "status": "Done",
+      "duration": 5.55,
+      "date": "2023-12-26T22:00:00.000Z",
+      "comment": "lolipops",
+      "id": 1
+    },
+    {
+      "recordName": "snooringggg",
+      "type": "Evening",
+      "status": "In Progress",
+      "duration": 6,
+      "date": "2023-12-26T22:00:00.000Z",
+      "comment": "khkhkhkh",
+      "id": 2
+    },
+    {
+      "recordName": "sleepy",
+      "type": "Morning",
+      "status": "In Progress",
+      "duration": 3,
+      "date": "2023-12-19T22:00:00.000Z",
+      "comment": "so asleep",
+      "id": 3
+    },
+    {
+      "recordName": "12/27/2023",
+      "type": "Afternoon",
+      "status": "In Progress",
+      "duration": 1,
+      "date": "2023-12-20T22:00:00.000Z",
+      "comment": "",
+      "id": 4
+    },
+    {
+      "recordName": "Hea",
+      "type": "Afternoon",
+      "status": "In Progress",
+      "duration": -1,
+      "date": "2023-12-27T22:00:00.000Z",
+      "comment": "",
+      "id": 5
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

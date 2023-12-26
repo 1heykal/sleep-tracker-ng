@@ -1,0 +1,23 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+/* mat-toolbar {
+    color: ghostwhite;
+    background-color: #00406c;
+} */
+
+table {
+  width: 100%;
+}
+
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
