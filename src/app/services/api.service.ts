@@ -8,7 +8,7 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  baseUrl = "http://localhost:3000/records/";
+  baseUrl = " http://localhost:5100/record";
 
   postRecord(data: any){
     return this.http.post<any>(this.baseUrl, data);

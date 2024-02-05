@@ -15,7 +15,7 @@ import {MatInputModule} from '@angular/material/input';
 })
 export class TableComponent implements OnInit{
 
-  displayedColumns: string[] = ['recordName', 'type', 'status', 'duration', 'date', 'comment', 'id','action'];
+  displayedColumns: string[] = ['name', 'status', 'duration', 'startTime', 'endTime', 'sleepQuality', 'action'];
   dataSource !: MatTableDataSource<any>;
 
   @ViewChild(MatPaginator) paginator! : MatPaginator;

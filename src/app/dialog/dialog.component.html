@@ -4,9 +4,9 @@
     <div style="padding: 2px;"></div>
     <mat-form-field appearance="outline">
         <mat-label>Record Name</mat-label>
-        <input formControlName="recordName" matInput placeholder="Name">
+        <input formControlName="name" matInput placeholder="Name">
     </mat-form-field>
-    <mat-form-field appearance="outline">
+    <!-- <mat-form-field appearance="outline">
         <mat-label>Record Type</mat-label>
         <mat-select  formControlName="type" placeholder="Type">
             <mat-option value="Morning">Morning</mat-option>
@@ -14,10 +14,32 @@
             <mat-option value="Evening">Evening</mat-option>
             <mat-option value="Night">Night</mat-option>
         </mat-select>
+    </mat-form-field> -->
+    
+    <mat-form-field appearance="outline">
+        <mat-label>Choose a startTime</mat-label>
+        <input  formControlName="startTime" matInput [matDatepicker]="spicker">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="spicker"></mat-datepicker-toggle>
+        <mat-datepicker #spicker></mat-datepicker>
     </mat-form-field>
     <mat-form-field appearance="outline">
-        <mat-label>Choose a date</mat-label>
-        <input  formControlName="date" matInput [matDatepicker]="picker">
+        <mat-label>Choose a currentStartTime</mat-label>
+        <input  formControlName="currentStartTime" matInput [matDatepicker]="cspicker">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="cspicker"></mat-datepicker-toggle>
+        <mat-datepicker #cspicker></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Choose a endTime</mat-label>
+        <input  formControlName="endTime" matInput [matDatepicker]="epicker">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="epicker"></mat-datepicker-toggle>
+        <mat-datepicker #epicker></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Choose a currentEndTime</mat-label>
+        <input  formControlName="currentEndTime" matInput [matDatepicker]="picker">
         <mat-hint>MM/DD/YYYY</mat-hint>
         <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
@@ -35,8 +57,8 @@
         <input formControlName="duration" matInput type="number" placeholder="Duration">
     </mat-form-field>
     <mat-form-field appearance="outline">
-        <mat-label>Comment</mat-label>
-        <textarea formControlName="comment" matInput placeholder="Comment"></textarea>
+        <mat-label>Description</mat-label>
+        <textarea formControlName="description" matInput placeholder="Description"></textarea>
     </mat-form-field>
     <div mat-dialog-action [align]="'end'">
         <button mat-raised-button color="warn" mat-dialog-close>Close</button>

@@ -25,34 +25,41 @@ export class DialogComponent implements OnInit {
 
   ngOnInit(): void {
     this.recordForm = this.formBuilder.group({
-      recordName: ['', Validators.required],
-      type: ['', Validators.required],
-      status: ['', Validators.required],
-      duration: ['', Validators.required],
-      date: ['', Validators.required],
-      comment: ''
+      name: '',
+      description: '',
+      sleepQuality: '',
+      duration: '',
+      status: '',
+      startTime: '',
+      currentStartTime: '',
+      currentEndTime: '',
+      endTime: '', 
     });
 
     if (this.editData) {
       this.actionBtn = "Update";
-      this.recordForm.controls['recordName'].setValue(this.editData.recordName);
-      this.recordForm.controls['type'].setValue(this.editData.type);
+      this.recordForm.controls['name'].setValue(this.editData.name);
+      this.recordForm.controls['description'].setValue(this.editData.description);
 
-      this.recordForm.controls['status'].setValue(this.editData.status);
+      this.recordForm.controls['sleepQuality'].setValue(this.editData.sleepQuality);
 
       this.recordForm.controls['duration'].setValue(this.editData.duration);
 
-      this.recordForm.controls['date'].setValue(this.editData.date);
+      this.recordForm.controls['status'].setValue(this.editData.status);
 
-      this.recordForm.controls['comment'].setValue(this.editData.comment);
+      this.recordForm.controls['startTime'].setValue(this.editData.startTime);
 
-      this.recordForm.controls['recordName'].setValue(this.editData.recordName);
+      this.recordForm.controls['currentStartTime'].setValue(this.editData.currentStartTime);
+
+      this.recordForm.controls['endTime'].setValue(this.editData.endTime);
+
+      this.recordForm.controls['currentEndTime'].setValue(this.editData.currentEndTime);
 
     }
-
   }
 
   addRecord() {
+
     if (this.editData) {
       this.updateRecord();
     } else {
